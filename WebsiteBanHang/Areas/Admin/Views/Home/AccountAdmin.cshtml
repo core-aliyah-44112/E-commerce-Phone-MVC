@@ -1,0 +1,43 @@
+﻿@model WebsiteBanHang.Context.User
+@{
+    ViewBag.Title = "AccountAdmin";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="section-content padding-y">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-9">
+                    <nav class="list-group">
+                        <a class="list-group-item active" href="#">My Account  </a>
+                    </nav>
+                    <article class="card mb-3">
+                        <div class="card-body">
+                            <figure class="icontext">
+                                <div class="icon">
+                                    <img class="rounded-circle img-sm border" src="~/Content/Admin/dist/img/user2-160x160.jpg">
+                                </div>
+                                <div class="text">
+                                    <strong>@Session["FullName"]</strong> <br>
+                                    <p class="mb-2">@Html.DisplayFor(model => model.Email) </p>
+                                    <a href="#" class="btn btn-light btn-sm">Edit</a>
+                                </div>
+                            </figure>
+                            <hr>
+                            <p>
+                                <i class="fa fa-map-marker text-muted"></i> &nbsp; Địa chỉ:
+                                <br>
+                                @Html.DisplayFor(model => model.Address)
+                            </p>
+                        </div> <!-- card-body .// -->
+
+                    </article> <!-- card.// -->
+
+                    <a class="btn btn-primary" href="/dang-xuat"> Log out </a>
+                </main> <!-- col.// -->
+            </div>
+
+        </div> <!-- container .//  -->
+    </section>
+</div>

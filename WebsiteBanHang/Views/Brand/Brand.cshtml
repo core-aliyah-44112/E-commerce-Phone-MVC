@@ -1,0 +1,36 @@
+﻿@model List<WebsiteBanHang.Context.Brand>
+@{
+    ViewBag.Title = "Brand";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <div class="container">
+
+        <nav class="row">
+            @foreach (var item in Model) {
+                <div class="col-md-3">
+
+                    <div class="card card-category" style="height: 550px">
+                        <div class="img-wrap w-100" style="background:#fff">
+                            <a href="/nhung-san-pham-thuong-hieu-@item.Slug/@item.Id"><img src="~/Content/images/brand/@item.Avatar"></a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title colorpicker-bar-horizontal"><a href="/nhung-san-pham-thuong-hieu-@item.Slug/@item.Id">@item.Name </a></h4>
+                        </div>
+                        <div class="card-footer">
+                            <p>@item.ShortDetail</p>
+                        </div>
+                    </div>
+                </div> <!-- col.// -->
+            }
+        </nav> <!-- row.// -->
+
+
+    </div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+<!-- ========================= SECTION SUBSCRIBE  ========================= -->
+
+<!-- ========================= SECTION SUBSCRIBE END// ========================= -->

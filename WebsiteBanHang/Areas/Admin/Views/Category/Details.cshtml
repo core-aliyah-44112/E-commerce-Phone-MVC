@@ -1,0 +1,90 @@
+﻿@model WebsiteBanHang.Context.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <h2>Chi tiết danh mục</h2>
+
+    <div>
+        <h4>Danh mục</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Avatar)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Avatar)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Slug)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Slug)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShortDetail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShortDetail)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShowOnHomePage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShowOnHomePage)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DisplayOrder)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DisplayOrder)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.deleted)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.deleted)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateOnUtc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreateOnUtc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UpdateOnUtc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UpdateOnUtc)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Quay lại danh mục", "Category")
+    </p>
+</div>

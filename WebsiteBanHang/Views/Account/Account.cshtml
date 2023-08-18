@@ -1,0 +1,106 @@
+﻿@model WebsiteBanHang.Context.User
+
+@{
+    ViewBag.Title = "Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:700px;   margin-top:40px;">
+        <article class="card-body">
+            <header><h2>Thông tin tài khoản</h2></header>
+            <hr />
+            <div>
+                <form>
+                </form>
+                <div class="">
+                    <dt>
+                        <p>Họ Tên:</p>
+                    </dt>
+                    <dd>
+                        @Session["FullName"]
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Gender)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+
+                </div>
+            </div>
+    </div>
+           <p class="text-lg-center"><a href="~/Home/Logout" class="btn btn-primary">Logout</a></p>
+    </article>
+    </div>
+</section>-->
+<!-- ========================= SECTION PAGETOP END// ========================= -->
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <div class="container">
+
+        <div class="row">
+            <aside class="col-md-3">
+                <nav class="list-group">
+                    <a class="list-group-item active" href="#"> Account overview  </a>
+                    <a class="list-group-item" href="#"> My Address </a>
+                    <a class="list-group-item" href="/dat-hang/@Session["UserId"]"> My Orders </a>
+                    <a class="list-group-item" href="#"> My wishlist </a>
+                    <a class="list-group-item" href="#"> My Selling Items </a>
+                    <a class="list-group-item" href="#"> Settings </a>
+                    <a class="list-group-item" href="/dang-xuat"> Log out </a>
+                    
+                </nav>
+            </aside> <!-- col.// -->
+            <main class="col-md-9">
+                <article class="card mb-3">
+                    <div class="card-body">
+                        <figure class="icontext">
+                            <div class="icon">
+                                <img class="rounded-circle img-sm border" src="~/Content/images/avatars/avatar.jpg">
+                            </div>
+                            <div class="text">
+                                <strong>@Session["FullName"]</strong> <br>
+                                <p class="mb-2">@Html.DisplayFor(model => model.Email) </p>
+                                <a href="#" class="btn btn-light btn-sm">Edit</a>
+                            </div>
+                        </figure>
+                        <hr>
+                        <p>
+                            <i class="fa fa-map-marker text-muted"></i> &nbsp; Địa chỉ:
+                            <br>
+                            @Html.DisplayFor(model => model.Address)
+                        </p>
+                    </div> <!-- card-body .// -->
+                </article> <!-- card.// -->
+            </main> <!-- col.// -->
+        </div>
+
+    </div> <!-- container .//  -->
+</section>
